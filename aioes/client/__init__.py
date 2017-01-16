@@ -130,7 +130,7 @@ class Elasticsearch:
         if percolate is not default:
             params['percolate'] = percolate
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if replication is not default:
             if not isinstance(replication, str):
                 raise TypeError("'replication' parameter is not a string")
@@ -185,9 +185,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = realtime
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
 
@@ -224,9 +224,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = realtime
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -273,9 +273,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = realtime
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -326,7 +326,7 @@ class Elasticsearch:
         if parent is not default:
             params['parent'] = parent
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if replication is not default:
             if not isinstance(replication, str):
                 raise TypeError("'replication' parameter is not a string")
@@ -392,9 +392,9 @@ class Elasticsearch:
         if preference is not default:
             params['preference'] = preference
         if realtime is not default:
-            params['realtime'] = bool(realtime)
+            params['realtime'] = realtime
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
 
@@ -435,23 +435,23 @@ class Elasticsearch:
         if _source_include is not default:
             params['_source_include'] = _source_include
         if analyze_wildcard is not default:
-            params['analyze_wildcard'] = bool(analyze_wildcard)
+            params['analyze_wildcard'] = analyze_wildcard
         if df is not default:
             params['df'] = df
         if explain is not default:
-            params['explain'] = bool(explain)
+            params['explain'] = explain
         if fields is not default:
             params['fields'] = fields
         if indices_boost is not default:
             params['indices_boost'] = indices_boost
         if lenient is not default:
-            params['lenient'] = bool(lenient)
+            params['lenient'] = lenient
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if lowercase_expanded_terms is not default:
-            params['lowercase_expanded_terms'] = bool(lowercase_expanded_terms)
+            params['lowercase_expanded_terms'] = lowercase_expanded_terms
         # from is a reserved word so it cannot be used, use from_ instead
         if from_ is not default:
             params['from'] = int(from_)
@@ -548,7 +548,7 @@ class Elasticsearch:
        """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if expand_wildcards is not default:
             if not isinstance(expand_wildcards, str):
                 raise TypeError("'expand_wildcards' parameter is not "
@@ -559,7 +559,7 @@ class Elasticsearch:
                 raise ValueError("'expand_wildcards' parameter should be"
                                  " one of 'open', 'closed'")
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if local is not default:
             params['local'] = local
         if preference is not default:
@@ -587,7 +587,7 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if expand_wildcards is not default:
             if not isinstance(expand_wildcards, str):
                 raise TypeError("'expand_wildcards' parameter is not "
@@ -598,7 +598,7 @@ class Elasticsearch:
                 raise ValueError("'expand_wildcards' parameter should be"
                                  " one of 'open', 'closed'")
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if preference is not default:
             params['preference'] = preference
         if routing is not default:
@@ -650,7 +650,7 @@ class Elasticsearch:
         if _source_include is not default:
             params['_source_include'] = _source_include
         if analyze_wildcard is not default:
-            params['analyze_wildcard'] = bool(analyze_wildcard)
+            params['analyze_wildcard'] = analyze_wildcard
         if analyzer is not default:
             params['analyzer'] = analyzer
         if df is not default:
@@ -658,9 +658,9 @@ class Elasticsearch:
         if fields is not default:
             params['fields'] = fields
         if lenient is not default:
-            params['lenient'] = bool(lenient)
+            params['lenient'] = lenient
         if lowercase_expanded_terms is not default:
-            params['lowercase_expanded_terms'] = bool(lowercase_expanded_terms)
+            params['lowercase_expanded_terms'] = lowercase_expanded_terms
         if parent is not default:
             params['parent'] = parent
         if preference is not default:
@@ -747,7 +747,7 @@ class Elasticsearch:
         if parent is not default:
             params['parent'] = parent
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
         if version is not default:
@@ -783,9 +783,9 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if min_score is not default:
             params['min_score'] = int(min_score)
         if preference is not default:
@@ -831,7 +831,7 @@ class Elasticsearch:
                 raise ValueError("'consistency' parameter should be one of "
                                  "'one', 'quorum', 'all'")
         if refresh is not default:
-            params['refresh'] = bool(refresh)
+            params['refresh'] = refresh
         if routing is not default:
             params['routing'] = routing
         if replication is not default:
@@ -901,7 +901,7 @@ class Elasticsearch:
 
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if analyzer is not default:
             params['analyzer'] = analyzer
         if default_operator is not default:
@@ -915,7 +915,7 @@ class Elasticsearch:
         if df is not default:
             params['df'] = df
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if q is not default:
             params['q'] = q
         if routing is not default:
@@ -971,9 +971,9 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if preference is not default:
             params['preference'] = preference
         if routing is not default:
@@ -1002,9 +1002,9 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if percolate_format is not default:
             params['percolate_format'] = percolate_format
         if percolate_index is not default:
@@ -1053,9 +1053,9 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
         if percolate_format is not default:
             params['percolate_format'] = percolate_format
         if percolate_index is not default:
@@ -1101,9 +1101,9 @@ class Elasticsearch:
         """
         params = {}
         if allow_no_indices is not default:
-            params['allow_no_indices'] = bool(allow_no_indices)
+            params['allow_no_indices'] = allow_no_indices
         if ignore_unavailable is not default:
-            params['ignore_unavailable'] = bool(ignore_unavailable)
+            params['ignore_unavailable'] = ignore_unavailable
 
         _, data = yield from self.transport.perform_request(
             'GET',
