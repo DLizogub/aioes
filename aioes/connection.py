@@ -18,12 +18,11 @@ class Connection:
 
     def __init__(self, endpoint, *, loop, verify_ssl=True):
         self._endpoint = endpoint
-        self._session = aiohttp.ClientSession(
-            connector=aiohttp.TCPConnector(
-                use_dns_cache=True,
-                loop=loop,
-                verify_ssl=verify_ssl),
-            loop=loop)
+        self._connector = aiohttp.TCPConnector(use_dns_cache=True,
+                                               loop=loop,
+                                               verify_ssl=verify_ssl)
+        self.loop = loop
+        self._session = None
         self._base_url = '{0.scheme}://{0.host}:{0.port}/'.format(endpoint)
 
     @property
@@ -36,6 +35,9 @@ class Connection:
     @asyncio.coroutine
     def perform_request(self, method, url, params, body):
         url = self._base_url + url
+        if self._session is None:
+            self._session = aiohttp.ClientSession(connector=self._connector,
+                                                  loop=self.loop)
         resp = yield from self._session.request(
             method, url, params=params, data=body)
         resp_body = yield from resp.text()
