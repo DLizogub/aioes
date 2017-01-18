@@ -30,7 +30,8 @@ class Connection:
         return self._endpoint
 
     def close(self):
-        return self._session.close()
+        if self._session:
+            return self._session.close()
 
     @asyncio.coroutine
     def perform_request(self, method, url, params, body):
